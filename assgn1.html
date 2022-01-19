@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Assignment</title>
+</head>
+<body>
+     <script>
+    function string_k(s) {
+        var w = "";
+        var sc=1;
+
+        for (i = 0; i < s.length; i++) {
+            if (s.charAt(i) == ' ')
+                sc++;
+            if(s.charAt(i) == '.' || s.charAt(i) == '!' ||s.charAt(i) =='?') {
+                if (sc > 3){
+                    w = w + s.charAt(i);
+                    w = w.replace(/[0-9]/g, 'X');
+                    document.write(w + " ");
+                    document.write("<br>");
+                 }
+                w = "";
+                sc=0;
+                continue;
+            }
+            w = w + s.charAt(i);
+        }
+    }
+    
+        var s = "Thank you so much for contacting us. Dreamland guest relations. You're speaking with Ronaldo. May I have your name, please? Yes, sure. My name is robin soleimani. What is your phone number? It is 9876535362 as mentioned in the book Diary. Thank you so much for providing the info!";
+        var k = 3;
+        s = s + " ";
+        string_k(s);
+
+</script>
+
+</body>
+</html>
